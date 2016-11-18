@@ -1,0 +1,17 @@
+Enter new student information
+<hr>
+<%= form_for @student do |f| -%>
+   Name: <%= f.text_field :name %> <br />
+   Url: <%= f.text_field :url %><br />
+   <%= f.submit %>
+<% end %>
+
+<hr>
+Display database listing
+<% if !@students.blank? %>
+  <% for item in @students %> <br />
+  <%= item.name %> | <%= item.url %> <br />
+  <% end %>
+<% else %>
+<% end %>
+  
